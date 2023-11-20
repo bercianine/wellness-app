@@ -3,12 +3,10 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
 
-  Rails.application.routes.draw do
-    resources :activities, only: [:index, :show, :new, :create] do
-      resources :bookings, only: [:new, :create]
-    end
+  resources :activities, only: [:index, :show, :new, :create] do
+    resources :bookings, only: [:new, :create]
   end
-
+end
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -19,4 +17,3 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-end
