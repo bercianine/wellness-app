@@ -1,5 +1,5 @@
 .footer {
-  position: absolute;
+  position: sticky;
   bottom: 0;
   width: 100%;
   background: #B68E6B;
@@ -9,6 +9,7 @@
   height: 100px;
   padding: 0px 50px;
   color: #F9F2E7;
+  margin-top: 64px;
 }
 .footer-links {
   display: flex;
