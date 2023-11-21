@@ -11,3 +11,10 @@
 @import "components/index";
 @import "pages/index";
 @import "components/banner";
+
+body{
+  height:100vh;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
