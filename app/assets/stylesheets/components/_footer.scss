@@ -1,6 +1,4 @@
 .footer {
-  position: sticky;
-  bottom: 0;
   width: 100%;
   background: #B68E6B;
   display: flex;
@@ -10,6 +8,8 @@
   padding: 0px 50px;
   color: #F9F2E7;
   margin-top: 64px;
+  position: absolute;
+  bottom: 0;
 }
 .footer-links {
   display: flex;

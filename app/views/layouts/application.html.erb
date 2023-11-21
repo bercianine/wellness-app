@@ -11,11 +11,12 @@
   </head>
 
   <body>
-  <%= render "shared/navbar" %>
-    <%= yield %>
-    <%#= render "layouts/footer" %>
-    <script>
-      feather.replace();
-    </script>
+    <div id="page-container">
+      <%= render "shared/navbar" %>
+        <div id="content-wrap">
+            <%= yield %>
+        </div>
+      <%= render "layouts/footer" %>
+    </div>
   </body>
 </html>

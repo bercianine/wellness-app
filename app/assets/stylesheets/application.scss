@@ -19,6 +19,10 @@ body{
   margin: 0;
   background-color: #F9F2E7;
   color: #1E1E1E;
+
+  p {
+    margin: 0;
+  }
 }
 
 body a {
@@ -40,4 +44,13 @@ h2, h3, h4, h5 {
 .card-img-top {
   object-fit: cover;
   height: 240px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 164px;
 }
