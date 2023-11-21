@@ -16,7 +16,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_21_104311) do
 
   create_table "activities", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
     t.string "location"
     t.integer "duration"
     t.string "img_url"
