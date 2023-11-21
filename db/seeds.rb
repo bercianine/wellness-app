@@ -21,16 +21,16 @@ puts 'Seeding goodness and coder happiness...'
 puts 'Creating | Activities | Bookings | Users ...'
 
 # HOST USER 1A
-user1a = User.create(email: 'host-a1@host.com', password: 'password', username: 'host 1a')
+user1a = User.create(first_name: 'Sofia', last_name:'Bercianine', avatar_url: 'https://source.unsplash.com/random/500x500/?portrait', email: 'host-a1@host.com', password: 'password', username: 'host 1a')
 
 # HOST USER 1B
-user1b = User.create(email: 'host-1b@host.com', password: 'password', username: 'host 1b')
+user1b = User.create(first_name: 'Elena', last_name:'Prousali', avatar_url: 'https://source.unsplash.com/random/500x500/?portrait', email: 'host-1b@host.com', password: 'password', username: 'host 1b')
 
 # GUEST USER 2A
-user2a = User.create(email: 'guest-2a@guest.com', password: 'password', username: 'guest 2a')
+user2a = User.create(first_name: 'Tobias', last_name:'Groenland', avatar_url: 'https://source.unsplash.com/random/500x500/?portrait', email: 'guest-2a@guest.com', password: 'password', username: 'guest 2a')
 
 # GUEST USER 2B
-user2b = User.create(email: 'guest-2b@guest.com', password: 'password', username: 'guest 2b')
+user2b = User.create(first_name: 'Francesca', last_name:'Santoriello', avatar_url: 'https://source.unsplash.com/random/500x500/?portrait', email: 'guest-2b@guest.com', password: 'password', username: 'guest 2b')
 
 # Activities
 Activity.create(user_id: user1a.id, name: 'Stone Massage', price: 500, location: 'Dam,Amsterdam', duration: 60, image_url: 'https://source.unsplash.com/random/?stone massage/1280*1280')
