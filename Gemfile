@@ -75,4 +75,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
+#Added gems
 gem "devise"
+gem "cloudinary"

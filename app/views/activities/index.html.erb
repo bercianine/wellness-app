@@ -11,7 +11,11 @@
     <% @activities.each do |activity| %>
       <%= link_to(activity_path(activity)) do %>
         <div class="card" style="background-color: #F9F2E7;">
-          <img src="<%= activity.img_url %>" class="card-img-top" alt="<%= activity.name %> Poster">
+          <% if activity.photo.attached? %>
+            <%= cl_image_tag activity.photo.key, crop: :fill, class: "card-img-top" %>
+          <% else %>
+            <img src="<%= activity.img_url %>" class="card-img-top" alt="<%= activity.name %>">
+          <% end %>
           <div class="card-body" style="border: 0.5px solid #B68E6B;">
             <div class="d-flex justify-content-between">
               <h4 class="card-title"><%= activity.name %></h4>
