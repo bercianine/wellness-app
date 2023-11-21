@@ -18,3 +18,10 @@ body{
   padding: 0;
   margin: 0;
 }
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 16px;
+}
