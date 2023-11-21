@@ -1,0 +1,10 @@
+<%= simple_form_for @activity do |f| %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :duration %>
+  <div class="d-flex" style="gap: 16px;">
+    <%= link_to "Cancel", activities_path, class: "btn btn-outline-secondary w-100 mt-4" %>
+    <%= f.button :submit, { class: "btn btn-primary w-100 mt-4" } %>
+  </div>
+<% end %>
