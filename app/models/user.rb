@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :activities
   has_many :bookings
+
+  validates :email, :encrypted_password, :first_name, :last_name, :avatar_url, presence: true
+  validates :encrypted_password, length: { minimum: 6}
+  validates :email, uniqueness: true
 end
