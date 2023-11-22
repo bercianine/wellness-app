@@ -1,11 +1,20 @@
-<%= simple_form_for @activity do |f| %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :name %>
-  <%= f.input :price %>
-  <%= f.input :location %>
-  <%= f.input :duration %>
-  <div class="d-flex" style="gap: 16px;">
-    <%= link_to "Cancel", activities_path, class: "btn btn-outline-secondary w-100 mt-4" %>
-    <%= f.button :submit, { class: "btn btn-primary w-100 mt-4" } %>
-  </div>
-<% end %>
+<div class="row justify-content-center">
+   <div class="col-12 col-lg-4">
+     <h4 class="text-center mb-5">New activity</h4>
+   </div>
+ </div>
+ <div class="row justify-content-center">
+    <div class="col-4">
+      <%= simple_form_for @activity do |f| %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :name %>
+        <%= f.input :price %>
+        <%= f.input :location %>
+        <%= f.input :duration %>
+        <div class="d-flex" style="gap: 16px;">
+          <%= link_to "Cancel", activities_path, class: "btn btn-outline-secondary w-100 mt-4" %>
+          <%= f.button :submit, { class: "btn btn-primary w-100 mt-4", style: "background-color: #E4768A; border: 0;" } %>
+        </div>
+      <% end %>
+    </div>
+ </div>
