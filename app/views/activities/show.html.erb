@@ -13,8 +13,8 @@
       </div>
     </div>
     <div>
-      <h3 class="mb-4"><span class="h6">$</span><%= @activity.price %></h3>
-      <h5><i data-feather="clock" class="w-25"></i><%= @activity.duration %></h5>
+      <p class="mb-4"><%= @activity.price %><span class="h6">€</span></p>
+      <p><i data-feather="clock" class="w-25"></i><%= @activity.duration %></p>
       <%= link_to "Book", "#", class: "btn btn-primary"%>
     </div>
   </div>
