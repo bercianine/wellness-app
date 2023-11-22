@@ -1,15 +1,23 @@
 .footer {
   width: 100%;
   background: #B68E6B;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // height: 100px;
   padding: 0px 50px;
   color: #F9F2E7;
   margin-top: 64px;
   position: absolute;
   bottom: 0;
+  // padding-top: 50px;
+}
+.footer-text {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.footer-copy {
+  font-size: 13px;
 }
 .footer-links {
   display: flex;
@@ -25,6 +33,6 @@
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
-  color: #D23333;
-}
+// .footer .fa-heart {
+//   color: #D23333;
+// }
