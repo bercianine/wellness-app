@@ -1,0 +1,17 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-4">
+    <h4 class="text-center mb-5">Book <%= @activity.name %></h4>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-4">
+    <%= simple_form_for [@activity, @booking] do |f| %>
+      <%= f.input :date %>
+      <%= f.input :start_time, as: :time, ampm: true %>
+      <div class="d-flex" style="gap: 16px;">
+        <%= link_to "Cancel", activity_path(@activity), class: "btn btn-outline-secondary w-100 mt-4" %>
+        <%= f.button :submit, { class: "btn btn-primary w-100 mt-4", style: "background-color: #E4768A; border: 0;" } %>
+      </div>
+    <% end %>
+  </div>
+</div>
