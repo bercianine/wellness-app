@@ -15,6 +15,9 @@
       <%= render "shared/navbar" %>
         <div id="content-wrap">
             <%= yield %>
+            <script>
+              feather.replace();
+            </script>
         </div>
       <%= render "layouts/footer" %>
     </div>
