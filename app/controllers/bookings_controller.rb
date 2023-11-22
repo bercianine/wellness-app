@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = current_user.bookings
+  end
+
   def new
     @activity = Activity.find(params[:activity_id])
     @booking = Booking.new
