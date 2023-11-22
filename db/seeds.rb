@@ -26,7 +26,7 @@ puts "Created #{user2b_record.first_name} #{user2b_record.last_name}"
 
 # Set the activity data
 puts 'Creating activities...'
-activity1 = { user_id: user1a_record.id, name: 'Hot Stone Massage', price: 500, location: 'Dam, Amsterdam', duration: 60, img_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
+activity1 = { user_id: user1a_record.id, name: 'Hot Stone Massage', price: 500, location: 'Dam, Amsterdam', duration: 60, img_url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', date: Date.strptime("09/14/2009", "%m/%d/%Y"), start_time: Time.parse("08:00") }
 activity2 = { user_id: user1b_record.id, name: 'Group Yoga', price: 725, location: 'Grote Markt, The Hague', duration: 90, img_url: 'https://plus.unsplash.com/premium_photo-1663047487227-0f3cd88ed8aa?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
 activity3 = { user_id: user2a_record.id, name: 'Group Spa', price: 150, location: 'Koolsingel, Rotterdam', duration: 180, img_url: 'https://plus.unsplash.com/premium_photo-1661277693458-6c65cb09aa41?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
 activity4 = { user_id: user2b_record.id, name: 'Ayurvedic Massage', price: 135, location: 'NS Central Station, Delft', duration: 60, img_url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
