@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.activity_id = @activity.id
     @booking.user_id = current_user.id
     if @booking.save
-      redirect_to activity_path(@activity)
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end

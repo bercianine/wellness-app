@@ -2,6 +2,7 @@ class ActivitiesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
+<<<<<<< HEAD
     @activities = Activity.all
     @markers = @activities.geocoded.map do |activity|
       {
@@ -9,6 +10,12 @@ class ActivitiesController < ApplicationController
         lng: activity.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: {activity: activity})
       }
+=======
+    if params[:query].present?
+      @activities = Activity.search_by_name_and_location(params[:query])
+    else
+      @activities = Activity.all
+>>>>>>> master
     end
   end
 
