@@ -78,3 +78,4 @@ end
 #Added gems
 gem "devise"
 gem "cloudinary"
+gem "pg_search"

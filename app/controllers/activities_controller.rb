@@ -2,7 +2,11 @@ class ActivitiesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @activities = Activity.all
+    if params[:query].present?
+      @activities = Activity.search_by_name_and_location(params[:query])
+    else
+      @activities = Activity.all
+    end
   end
 
   def show
