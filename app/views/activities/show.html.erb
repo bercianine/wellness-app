@@ -4,28 +4,35 @@
   <img src="<%= @activity.img_url %>" class="card-img-top main-image" alt="<%= activity.name %>">
 <% end %>
 <div class="container">
-  <div class="d-flex flex-column">
-    <div class="d-flex justify-content-between align-items-center mt-4">
-      <h3><%= @activity.name %></h3>
-      <h4><%= @activity.price %><span class="h6"> €</span></h4>
-    </div>
-    <div class="d-flex justify-content-between align-items-end mb-4 mt-3">
-      <h6><i data-feather="map-pin" class="location_pin"></i><%= @activity.location %></h6>
-      <h6 class="text-end"><i data-feather="clock" class="clock-icon"></i><%= @activity.duration %>min</h6>
-    </div>
-    <div class="d-flex justify-content-between">
-      <p class="description w-50">Hatha yoga focuses on posture and breathing techniques, traditionally to channel vital energy source. In Sanskrit, Hatha translates to force. The practice involves breath, body, and mind, and classes are usually 45 minutes to 90 minutes of breathing, yoga poses, and meditation</p>
-    </div>
-    <div class="d-flex justify-content-between align-items-end mt-4">
-      <div class="d-flex align-items-center">
-        <img src="<%= @activity.user.avatar_url %>" alt="host-image" class="rounded-circle smaller-img">
-        <p class="m-0 py-0 owner">
-          <%= @activity.user.first_name%> <%= @activity.user.last_name %>
-        </p>
+  <div class="row justify-content-around mt-4 mb-4">
+    <div class="d-flex flex-column col-6">
+      <div class="d-flex justify-content-between align-items-center my-auto">
+        <h3><%= @activity.name %></h3>
+        <h4><%= @activity.price %><span class="h6"> €</span></h4>
       </div>
-      <div >
-        <%= link_to "Book", new_activity_booking_path(@activity.id), class: "btn btn-primary btn-lg", style: "background-color: #E4768A; border: 0;"%>
+      <div class="d-flex justify-content-between align-items-end my-auto">
+        <h6><i data-feather="map-pin" class="location_pin"></i><%= @activity.location %></h6>
+        <h6 class="text-end"><i data-feather="clock" class="clock-icon"></i><%= @activity.duration %>min</h6>
       </div>
+      <div class="my-auto">
+        <p class="description w-70">Hatha yoga focuses on posture and breathing techniques, traditionally to channel vital energy source. In Sanskrit, Hatha translates to force. The practice involves breath, body, and mind, and classes are usually 45 minutes to 90 minutes of breathing, yoga poses, and meditation</p>
+      </div>
+      <div class="d-flex justify-content-between align-items-end mt-auto">
+        <div class="d-flex align-items-center">
+          <img src="<%= @activity.user.avatar_url %>" alt="host-image" class="rounded-circle smaller-img">
+          <p class="m-0 py-0 owner">
+            <%= @activity.user.first_name%> <%= @activity.user.last_name %>
+          </p>
+        </div>
+        <div >
+          <%= link_to "Book", new_activity_booking_path(@activity.id), class: "btn btn-primary btn-lg", style: "background-color: #E4768A; border: 0;"%>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 mt-4" style="width: 30%; height: 330px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
 </div>
