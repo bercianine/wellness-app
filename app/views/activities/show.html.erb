@@ -1,4 +1,8 @@
-<img src="<%= @activity.img_url %>" class="card-img-top main-image" alt="<%= @activity.name %> Poster">
+<% if @activity.photo.attached? %>
+  <%= cl_image_tag @activity.photo.key, crop: :fill, class: "card-img-top main-image" %>
+<% else %>
+  <img src="<%= @activity.img_url %>" class="card-img-top main-image" alt="<%= activity.name %>">
+<% end %>
 <div class="container">
   <div class="row justify-content-around mt-4 mb-4">
     <div class="d-flex flex-column col-6">
