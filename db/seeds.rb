@@ -1,11 +1,11 @@
 # Clean database
 puts 'Cleaning database...'
+Booking.destroy_all
+puts 'Cleaned Bookings...'
 Activity.destroy_all
 puts 'Cleaned Activities...'
 User.destroy_all
 puts 'Cleaned Users...'
-Booking.destroy_all
-puts 'Cleaned Bookings...'
 
 # Set the user data
 puts 'Creating users...'
