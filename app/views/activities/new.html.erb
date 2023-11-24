@@ -15,7 +15,12 @@
           <div data-date-target="addElement">
           <%= f.input :available_dates,
             as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+            input_html: { data: { controller: "datepicker", action: "change->date#populate" } }
+          %>
+          <%= f.input :available_dates_array,
+            as: :hidden,
+            input_html: { data: { date_target: "dates" } }
+          %>
           </div>
           <p data-action="click->date#add" class="btn btn-outline-primary">Add available date</p>
         </div>
