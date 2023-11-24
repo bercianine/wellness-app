@@ -31,6 +31,7 @@ class ActivitiesController < ApplicationController
 
   def create
     @activity = Activity.new(activity_params)
+    @activity.available_dates = compute_available_dates
     @activity.user_id = current_user.id
     if @activity.save
       redirect_to activity_path(@activity)
@@ -42,6 +43,10 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:user_id, :name, :price, :location, :duration, :photo)
+    params.require(:activity).permit(:user_id, :name, :price, :location, :duration, :photo, :available_dates_array)
+  end
+
+  def compute_available_dates
+    activity_params[:available_dates_array].split(',').map { |date| Date.parse(date) }
   end
 end

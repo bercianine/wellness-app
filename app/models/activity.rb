@@ -3,6 +3,8 @@ class Activity < ApplicationRecord
   has_many          :bookings
   has_one_attached  :photo
 
+  attr_accessor :available_dates_array
+
   validates :name, :price, :location, :duration, presence: true
 
   geocoded_by :location
@@ -13,12 +15,4 @@ class Activity < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-  # pg_search_scope :global_search,
-  # against: [ :name, :location ],
-  # associated_against: {
-  #   director: [ :first_name, :last_name ]
-  # },
-  # using: {
-  #   tsearch: { prefix: true }
-  # }
 end
