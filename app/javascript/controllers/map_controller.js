@@ -18,10 +18,13 @@ export default class extends Controller {
 
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
+
     if (this.element.dataset.page.includes("index")) {
       this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl }))
+        mapboxgl: mapboxgl,
+        marker: {color: "#E4768A"}, countries: "nl", bbox: [3.2, 50.75, 7.2, 53.5] }))
       }
+
   }
     #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
