@@ -46,7 +46,7 @@
   <h3>Check all of our locations</h3>
   <p>Click on the pins and see the activities.</p>
 </div>
-<div style="width: 100%; height: 480px;"
+<div data-page="<%= params[:action] %>" style="width: 100%; height: 480px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">

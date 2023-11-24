@@ -4,11 +4,7 @@
   <div class="pop-up-img" style="background-image: url('<%=activity.img_url %>')"></div>
 <% end %>
 
-<h2><%= activity.name %></h2>
+<h6 class="pop-up-header my-1"><%= activity.name %></h6>
 <p><%= activity.location %></p>
 
-<%= link_to "See more", activity_path(activity) %>
-
-
-
-
+<%= link_to "See more", activity_path(activity), class: "pop-up-link" %>
