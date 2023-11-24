@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="main-grid mb-4" style="margin-top: 32px;">
-    <% @activities.each do |activity| %>
+    <% @activities[-3..-1].each do |activity| %>
       <%= link_to(activity_path(activity)) do %>
         <div class="card" style="background-color: #F9F2E7;">
           <% if activity.photo.attached? %>
@@ -29,10 +29,5 @@
       <% end %>
     <% end %>
   </div>
-    <div class="container justify-content-center text-center my-5">
-      <h2>Self care like never before</h2>
-      <p>Book an activity today and elevate the way you take care of your body, mind and soul</p>
-      <br>
-      <%= link_to "Join us", new_user_session_path, class: "btn text-white btn-pink" %>
-    </div>
 </div>
+<%= render "layouts/home_section" %>

@@ -1,0 +1,13 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://img.tobias.media/landing-background.jpg");
+
+  h2, p {
+    color: black;
+  }
+
+}
