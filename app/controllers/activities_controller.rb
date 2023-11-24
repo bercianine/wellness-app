@@ -1,5 +1,4 @@
 class ActivitiesController < ApplicationController
-
   def index
     @activities = Activity.all
     @markers = @activities.geocoded.map do |activity|
