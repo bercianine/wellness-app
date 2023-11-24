@@ -1,5 +1,9 @@
 <div class="row justify-content-center">
+  <% if @user.avatar_url != nil %>
     <img src="<%= @user.avatar_url %>" alt="host-image" class="rounded-circle" style="height: 88px; width: auto;">
+  <% else %>
+    <img src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="host-image" class="rounded-circle" style="height: 88px; width: auto;">
+  <% end %>
     <h4 class="text-center mb-5 mt-3"><%= @user.first_name %> <%= @user.last_name %></h4>
 </div>
   <div class="row justify-content-center">
