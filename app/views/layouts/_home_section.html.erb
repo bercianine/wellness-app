@@ -1,0 +1,12 @@
+<div class="home_section">
+  <div class="container justify-content-center text-center">
+      <h2>Self care like never before</h2>
+      <p style="color: black;">Book an activity today and elevate the way you take care of your body, mind and soul</p>
+      <br>
+       <% if user_signed_in? %>
+        <%= link_to "Check my bookings", bookings_path, class: "btn text-white btn-pink" %>
+      <% else %>
+        <%= link_to "Join us", new_user_session_path, class: "btn text-white btn-pink" %>
+      <% end %>
+    </div>
+</div>
