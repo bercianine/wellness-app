@@ -8,22 +8,29 @@
 </div>
   <div class="row justify-content-center">
     <div class="col-4">
-      <% @bookings.each do |booking| %>
-        <div class="card pt-2 w-100 mb-3" style="background-color: #F9F2E7">
-          <div class="card-body" style="gap: 40px;">
-            <div class="d-flex mb-1" style="gap: 8px;">
-              <h5 class="card-text"><%= booking.activity.name %></h5>
-            </div>
-            <div class="d-flex" style="gap: 8px;">
-              <p class="card-text text-secondary">Date and time:</p>
-              <p class="card-text"><%= booking.date.strftime("%d/%m/%Y") %></p>
+      <% if @bookings.empty? %>
+        <div class="d-flex flex-column align-items-center" style="gap: 8px; text-align: center;">
+          <p>You don't have any bookings yet.</p>
+          <%= link_to "See activities", activities_path, style: "color: #E4768A;" %>
+        </div>
+      <% else %>
+        <% @bookings.each do |booking| %>
+          <div class="card pt-2 w-100 mb-3" style="background-color: #F9F2E7">
+            <div class="card-body" style="gap: 40px;">
+              <div class="d-flex mb-1" style="gap: 8px;">
+                <h5 class="card-text"><%= booking.activity.name %></h5>
+              </div>
+              <div class="d-flex" style="gap: 8px;">
+                <p class="card-text text-secondary">Date and time:</p>
+                <p class="card-text"><%= booking.date.strftime("%d/%m/%Y") %></p>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
       <br>
       <div class="d-flex justify-content-center">
-        <%= link_to "Log out", destroy_user_session_path, class: "btn btn-outline-danger", data: {turbo_method: :delete} %>
+        <%= link_to "Log out", destroy_user_session_path, class: "btn btn-outline-danger mt-2", data: {turbo_method: :delete} %>
       </div>
     </div>
  </div>
