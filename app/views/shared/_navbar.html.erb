@@ -2,7 +2,7 @@
   <div class="container-fluid justify-content-around">
     <div class="w-50 d-flex justify-content-around">
       <%= link_to "Activities", activities_path, class: "my-auto" %>
-      <h2>Wellness</h2>
+      <%= link_to "Wellness", root_path, class: "h2" %>
       <% if user_signed_in? %>
         <%= link_to "My bookings", bookings_path, class: "my-auto" %>
       <% else %>
