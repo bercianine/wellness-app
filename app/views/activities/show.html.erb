@@ -14,12 +14,24 @@
         <h6><i data-feather="map-pin" class="location_pin"></i><%= @activity.location %></h6>
         <h6 class="text-end"><i data-feather="clock" class="clock-icon"></i><%= @activity.duration %>min</h6>
       </div>
+      <div class="d-flex align-items-end my-auto" style="gap: 8px;">
+        <p><strong>Available dates:</strong></p>
+        <ul class="dates">
+        <% @activity.available_dates.each do |date| %>
+          <li><%= date.strftime("%A, %d %b %Y") %></li>
+        <% end %>
+        </ul>
+      </div>
       <div class="my-auto">
         <p class="description w-70"><%= @activity.description %></p>
       </div>
       <div class="d-flex justify-content-between align-items-end mt-auto">
         <div class="d-flex align-items-center">
-          <img src="<%= @activity.user.avatar_url %>" alt="host-image" class="rounded-circle smaller-img">
+            <% if @activity.user.avatar_url != nil %>
+              <img src="<%= @activity.user.avatar_url %>" alt="host-image" class="rounded-circle smaller-img">
+            <% else %>
+              <img src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="host-image" class="rounded-circle smaller-img">
+            <% end %>
           <p class="m-0 py-0 owner">
             <%= @activity.user.first_name%> <%= @activity.user.last_name %>
           </p>
