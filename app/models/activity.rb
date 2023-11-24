@@ -3,7 +3,7 @@ class Activity < ApplicationRecord
   has_many          :bookings
   has_one_attached  :photo
 
-  attr_writer :available_dates_array
+  attr_accessor :available_dates_array
 
   validates :name, :price, :location, :duration, presence: true
 

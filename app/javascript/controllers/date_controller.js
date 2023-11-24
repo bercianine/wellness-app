@@ -10,7 +10,7 @@ export default class extends Controller {
 
   add() {
     this.addElementTarget.insertAdjacentHTML("beforeend", `
-      <input class="form-control string optional flatpickr-input"
+      <input class="form-control string optional flatpickr-input mb-2"
       data-action="change->date#populate"
       data-controller="datepicker"
       type="text" value="" name="activity[available_dates]"

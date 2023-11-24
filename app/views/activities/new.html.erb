@@ -12,7 +12,7 @@
         <%= f.input :location %>
         <%= f.input :duration %>
         <div data-controller="date">
-          <div data-date-target="addElement">
+          <div data-date-target="addElement" class="mb-2">
           <%= f.input :available_dates,
             as: :string,
             input_html: { data: { controller: "datepicker", action: "change->date#populate" } }
