@@ -1,0 +1,14 @@
+<% if activity.photo.attached? %>
+<img src="<%=cl_image_path activity.photo.key%>" alt="">
+<% else %>
+  <div class="pop-up-img" style="background-image: url('<%=activity.img_url %>')"></div>
+<% end %>
+
+<h2><%= activity.name %></h2>
+<p><%= activity.location %></p>
+
+<%= link_to "See more", activity_path(activity) %>
+
+
+
+

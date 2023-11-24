@@ -2,13 +2,10 @@
   background-size: cover;
   background-position: center;
   padding: 155px 0 75px 5px;
-  background-image: url("https://tobias.media/wellness-background.jpg") !important;
+  background-image: url("https://img.tobias.media/activities-background.png") !important;
+  height: 400px;
 }
 
-.banner img {
-  // -webkit-transform: scaleX(-1) !important !important;
-  // transform: scaleX(-1) !important;
-}
 
 .banner h1 {
   color: #F9F2E7;
@@ -31,4 +28,34 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   // padding: 15px 0 0 5px !important;
+}
+
+.banner_home {
+  background-size: cover;
+  background-position: center;
+  padding: 155px 0 75px 5px;
+  background-image: url("https://img.tobias.media/landing-background.jpg") !important;
+  height: 400px;
+
+  h1 {
+    color: #F9F2E7;
+    font-size: 38px;
+    font-weight: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    padding-bottom: 5px;
+  }
+
+  p {
+      color: #F9F2E7;
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      opacity: .7;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
 }
