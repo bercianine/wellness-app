@@ -43,7 +43,7 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:user_id, :name, :price, :location, :duration, :photo, :available_dates_array)
+    params.require(:activity).permit(:user_id, :name, :price, :location, :duration, :photo, :available_dates_array, :description)
   end
 
   def compute_available_dates
