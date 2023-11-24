@@ -55,6 +55,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_24_102325) do
     t.float "longitude"
     t.date "available_dates", default: [], array: true
     t.string "description"
+    t.date "available_dates", default: [], array: true
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
