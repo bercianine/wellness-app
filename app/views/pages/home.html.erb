@@ -1,33 +1,33 @@
-<%= render "layouts/banner" %>
-<%# <div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+<%= render "layouts/bannerhome" %>
+<div class="container mt-1">
+  <div class="d-flex justify-content-center">
+    <div class="container text-center mb-3 mt-5">
+      <h2>Browse Activities</h2>
+      <p>Your ultimate paths for mindful living</p>
+    </div>
   </div>
-</div> %>
-<%# <div class="main"><div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Lunch
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Dinner
-  </div>
-</div></div> %>
-<%# <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  <div class="main-grid mb-4" style="margin-top: 32px;">
+    <% @activities[-3..-1].each do |activity| %>
+      <%= link_to(activity_path(activity)) do %>
+        <div class="card" style="background-color: #F9F2E7;">
+          <% if activity.photo.attached? %>
+            <%= cl_image_tag activity.photo.key, crop: :fill, class: "card-img-top" %>
+          <% else %>
+            <img src="<%= activity.img_url %>" class="card-img-top" alt="<%= activity.name %>">
+          <% end %>
+          <div class="card-body" style="border: 0.5px solid #B68E6B;">
+            <div class="d-flex justify-content-between">
+              <h4 class="card-title"><%= activity.name %></h4>
+              <p style="font-weight: 600; font-size: 18px;"><%= activity.price %>€</p>
+            </div>
+            <div class="d-flex" style="gap: 16px;">
+              <p class="text-secondary mb-0"><%= activity.location %></p>
+              <p class="text-secondary mb-0"><%= activity.duration %> min</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
-  </div> %>
+<%= render "layouts/home_section" %>

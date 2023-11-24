@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :bookings
 
   validates :email, :encrypted_password, :first_name, :last_name, presence: true
-  validates :encrypted_password, length: { minimum: 6}
+  validates :encrypted_password, length: { minimum: 6 }
   validates :email, uniqueness: true
 end

@@ -1,0 +1,10 @@
+.home_section {
+  background: rgb(228,118,138);
+  background: radial-gradient(ellipse at center, rgba(228,118,138,0.3) 0%, rgba(247,239,225,0.3) 56%);
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  h2, p {
+    color: black;
+  }
+}
